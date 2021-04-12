@@ -1,0 +1,19 @@
+<%= form_for board do |f| %>
+  <div class="form-group">
+    <%= f.label :person_name, '投稿者' %>
+    <%= f.text_field :person_name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+  <%= f.label :company_name, '発注企業名' %>
+  <%= f.text_field :company_name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :work_place, '勤務地' %>
+    <%= f.text_field :work_place, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :body, '本文' %>
+    <%= f.text_area :body, class: 'form-control', rows: 10 %>
+  </div>
+  <%= f.submit '保存', class: 'btn btn-primary' %>
+<% end %>

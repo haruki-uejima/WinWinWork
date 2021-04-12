@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Webサービス名
+WinWinWork
 
-Things you may want to cover:
+## サービス概要
+労働者が安心して働けるようにする。
 
-* Ruby version
+## このサービスを通じて、解決したいこと。
+労働の就業時の応募要項と実際の仕事内容とのギャップを無くしたい。
+私は、学生時代にアルバイトを50種類ほど経験しました。
+応募要項と実際の就業後の仕事内容が大きく異なっていることが多々あった。
+実体験として、労働者同士でこのような情報共有を口頭でおこなっていた。
+Webサービスを通して、労働者同士で情報共有をしあって、この課題を解決したい。
 
-* System dependencies
+## サービスのターゲット層
+・高校生や大学生などの学生アルバイトの方
+・会社員で隙間時間に副業をされている方
+・日雇い派遣アルバイトをされている方
 
-* Configuration
+## サービスのリリース日
+未定。
 
-* Database creation
+## バージョンなど。
+Ruby : 2.7.2
+Rails : 6.1.3.1
+MySQL : 8.0.0
+JavaScript, jQuery
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Docker, docker-compose（開発環境）
+※予定 : AWS（本番環境）
