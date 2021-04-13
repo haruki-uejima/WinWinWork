@@ -1,4 +1,13 @@
 ja:
+  activerecord:
+    attributes:
+      board:
+        name: '名前'
+        title: 'タイトル'
+        body: '本文'
+      comment:
+        name:  '名前'
+        comment: 'コメント'
   views:
     pagination:
       first: "&laquo; 最初"
