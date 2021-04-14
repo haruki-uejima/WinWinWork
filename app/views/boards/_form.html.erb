@@ -1,4 +1,6 @@
-<%= form_for board do |f| %>
+<%= render 'shared/error_messages' %>
+
+<%= form_with model: board do |f| %>
   <div class="form-group">
     <%= f.label :person_name, '投稿者' %>
     <%= f.text_field :person_name, class: 'form-control' %>
@@ -17,7 +19,7 @@
   </div>
   <div class="form-group">
     <span>タグ</span>
-    <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+    <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :namen) do |tag| %>
       <div class="form-check">
         <%= tag.label class: 'form-check-label' do %>
           <%= tag.check_box class: 'form-check-input' %>

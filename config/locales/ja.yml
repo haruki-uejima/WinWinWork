@@ -2,8 +2,9 @@ ja:
   activerecord:
     attributes:
       board:
-        name: '名前'
-        title: 'タイトル'
+        person_name: '投稿者'
+        company_name: '発注企業名'
+        work_place: '勤務地'
         body: '本文'
       comment:
         name:  '名前'

@@ -11,11 +11,11 @@ if Rails.env == 'development'
     end
 
     Tag.create([
-        { name: '飲食' },
-        { name: '軽作業' },
-        { name: '製造・物流' },
-        { name: '営業・販売' },
-        { name: '事務・オフィスワーク' },
-        { name: 'その他' },
+        { namen: '飲食' },
+        { namen: '軽作業' },
+        { namen: '製造・物流' },
+        { namen: '営業・販売' },
+        { namen: '事務・オフィスワーク' },
+        { namen: 'その他' }
     ])
 end
