@@ -1,0 +1,36 @@
+<h1>ユーザー一覧</h1>
+
+<div class="nav.justify-content-end">
+    <%= link_to '一覧', admin_users_path, class: 'nav-link' %>
+</div>
+<table class="table.table-hover">
+    <tbody>
+        <tr>
+            <th><%= User.human_attribute_name(:id) %></th>
+            <td><%= @user.id %></td>
+        </tr>
+        <tr>
+            <th><%= User.human_attribute_name(:name) %></th>
+            <td><%= @user.name %></td>
+        </tr>
+        <tr>
+            <th><%= User.human_attribute_name(:email) %></th>
+            <td><%= @user.email %></td>
+        </tr>
+        <tr>
+            <th><%= User.human_attribute_name(:admin) %></th>
+            <td><%= @user.admin? ? 'あり' : 'なし' %></td>
+        </tr>
+        <tr>
+            <th><%= User.human_attribute_name(:created_at) %></th>
+            <td><%= @user.created_at %></td>
+        </tr>
+        <tr>
+            <th><%= User.human_attribute_name(:updated_at) %></th>
+            <td><%= @user.updated_at %></td>
+        </tr>
+    </tbody>
+</table>
+
+<%= link_to '編集', edit_admin_user_path, class: 'btn btn-primary mr-3' %>
+<%= link_to '削除', [:admin, @user], method: :delete, data: { confirm: "ユーザー「#{@user.name}」を削除します。よろしいですか？"}, class: 'btn btn-danger' %>

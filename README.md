@@ -21,17 +21,36 @@ Webサービスを通して、労働者同士で情報共有をしあって、�
 ## サービスのリリース日
 未定。
 
-## 開発言語、使用技術
+## 実装機能一覧
+### ユーザー
+※実装中 : ログイン機能<br>
+
+### 投稿機能
+・投稿作成<br>
+・投稿一覧<br>
+・投稿編集<br>
+・投稿削除<br>
+・コメント機能<br>
+・タグを使用して投稿の絞り込み機能<br>
+・ページネーション<br>
+
+### その他
+※予定 : Web APIの実装<br>
+
+## 開発言語、使用技術一覧
 ### ・フロントエンド
-HTML, CSS, BootStrap4<br>
-JavaScript, jQuery<br>
+・HTML, CSS<br>
+・Sass(scss)<br>
+・JavaScript, jQuery<br>
 
 ### ・バックエンド
-Ruby : 2.7.2<br>
-Rails : 6.1.3.1<br>
-MySQL : 8.0.0<br>
-RSpec : 5.0.0<br>
+・Ruby : 2.7.2<br>
+・Rails : 6.1.3.1<br>
+・MySQL : 8.0.0<br>
 
 ### ・インフラ
-Docker, docker-compose（開発環境）
+Docker, docker-compose（開発環境）<br>
 ※予定 : AWS（本番環境）<br>
+
+## ・テスト
+・RSpec : 5.0.0<br>
