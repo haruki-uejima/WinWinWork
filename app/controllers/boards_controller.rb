@@ -13,7 +13,7 @@ class BoardsController < ApplicationController
     def create
         board = Board.new(board_params)
         if board.save
-            flash[:notice] = "投稿を作成しました。"
+            flash[:notice] = "投稿が作成されました。"
             redirect_to board
         else
             redirect_to new_board_path, flash: {
@@ -32,8 +32,7 @@ class BoardsController < ApplicationController
 
     def update
         @board.update(board_params)
-
-        redirect_to @board
+        redirect_to @board, flash: { notice: "投稿が更新されました。"}
     end
 
     def destroy
