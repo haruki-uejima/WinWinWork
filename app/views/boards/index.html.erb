@@ -20,11 +20,10 @@
 <table class="table table-hover boards__table">
   <thead class="thead-dark">
     <tr>
-      <th>ID</th>
       <th>投稿者</th>
-      <th>発注企業名</th>
+      <th>作成日</th>
       <th>勤務地</th>
-      <th>作成日時</th>
+      <th>お仕事の内容について</th>
       <th></th>
       <th></th>
     </tr>
@@ -32,11 +31,10 @@
   <tbody>
     <% @boards.each do |board| %>
       <tr>
-        <td><%= board.id %></td>
         <td><%= board.person_name %></td>
-        <td><%= board.company_name %></td>
-        <td><%= board.work_place %></td>
         <td><%= board.created_at.to_s(:datetime_jp) %></td>
+        <td><%= board.work_place %></td>
+        <td><%= board.body %></td>
         <td><%= link_to '詳細', board, class: 'btn btn-outline-dark' %></td>
         <td><%= link_to '削除', board, class: 'btn btn-outline-dark', method: :delete %></td>
       </tr>
