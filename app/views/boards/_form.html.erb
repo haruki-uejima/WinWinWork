@@ -2,23 +2,23 @@
 
 <%= form_with model: board do |f| %>
   <div class="form-group">
-    <%= f.label :person_name, '投稿者' %>
+    <%= f.label :person_name, '投稿者　※必須' %>
     <%= f.text_field :person_name, class: 'form-control' %>
   </div>
   <div class="form-group">
-  <%= f.label :company_name, '発注企業名' %>
+  <%= f.label :company_name, '発注企業名　※必須' %>
   <%= f.text_field :company_name, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :work_place, '勤務地' %>
+    <%= f.label :work_place, '勤務地　※必須' %>
     <%= f.text_field :work_place, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :body, '本文' %>
+    <%= f.label :body, '本文　※必須' %>
     <%= f.text_area :body, class: 'form-control', rows: 10 %>
   </div>
   <div class="form-group">
-    <span>タグ</span>
+    <span>【職種】</span>
     <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :namen) do |tag| %>
       <div class="form-check">
         <%= tag.label class: 'form-check-label' do %>
@@ -28,5 +28,5 @@
       </div>
     <% end %>
   </div>
-  <%= f.submit '保存', class: 'btn btn-primary' %>
+  <%= f.submit '登録', class: 'btn btn-primary' %>
 <% end %>

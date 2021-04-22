@@ -11,7 +11,7 @@
             }
         %>
     <% end %>
-    <a href="/boards/new" class="btn btn-outline-dark">新規作成</a>
+    <%= link_to '新規作成', new_board_path, class: 'btn btn-primary' %>
   </div>
 </div>
 <% if flash[:notice] %>
@@ -36,7 +36,7 @@
         <td><%= board.work_place %></td>
         <td><%= board.body %></td>
         <td><%= link_to '詳細', board, class: 'btn btn-outline-dark' %></td>
-        <td><%= link_to '削除', board, class: 'btn btn-outline-dark', method: :delete %></td>
+        <td><%= link_to '削除', board, class: 'btn btn-outline-dark', method: :delete, data: { confirm: "この投稿を削除してもよろしいですか？"} %></td>
       </tr>
     <% end %>
   </tbody>
