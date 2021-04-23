@@ -1,9 +1,9 @@
 <h1>ユーザー一覧</h1>
 
-<div class="nav.justify-content-end">
+<ul class="nav justify-content-end">
     <%= link_to '一覧', admin_users_path, class: 'nav-link' %>
-</div>
-<table class="table.table-hover">
+</ul>
+<table class="table table-hover">
     <tbody>
         <tr>
             <th><%= User.human_attribute_name(:id) %></th>
