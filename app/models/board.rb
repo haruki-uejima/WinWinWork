@@ -19,5 +19,5 @@ class Board < ApplicationRecord
     validates :person_name, presence: true, length: { maximum: 10 }
     validates :company_name, presence: true, length: { maximum: 20 }
     validates :work_place, presence: true, length: { maximum: 10 }
-    validates :body, presence: true, length: { maximum: 1000 }
+    validates :body, presence: true, length: { maximum: 500 }
 end
