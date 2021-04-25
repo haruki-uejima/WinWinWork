@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_18_024253) do
+ActiveRecord::Schema.define(version: 2021_04_25_032647) do
 
   create_table "board_tag_relations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "board_id", null: false

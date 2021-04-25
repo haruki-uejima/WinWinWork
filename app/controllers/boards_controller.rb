@@ -3,7 +3,7 @@ class BoardsController < ApplicationController
 
     def index
         @boards = params[:tag_id].present? ? Tag.find(params[:tag_id]).boards : Board.all
-        @boards = @boards.page(params[:page])
+        @boards = @boards.page(params[:page]).order(created_at: :desc)
     end
 
     def new
