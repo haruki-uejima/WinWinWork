@@ -32,7 +32,7 @@
     <% @boards.each do |board| %>
       <tr>
         <td><%= board.person_name %></td>
-        <td><%= board.created_at.to_s(:datetime_jp) %></td>
+        <td><%= board.created_at.to_s(:boards_boardatetime_jp) %></td>
         <td><%= board.work_place %></td>
         <td><%= board.body %></td>
         <td><%= link_to '詳細', board, class: 'btn btn-outline-dark' %></td>
