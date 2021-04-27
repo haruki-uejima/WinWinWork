@@ -2,6 +2,7 @@ class BoardsController < ApplicationController
     before_action :set_target_board, only: %i[show edit update destroy]
 
     def index
+        @boards = current_user.boards
         @boards = params[:tag_id].present? ? Tag.find(params[:tag_id]).boards : Board.all
         @boards = @boards.page(params[:page]).order(created_at: :desc)
     end
@@ -11,7 +12,7 @@ class BoardsController < ApplicationController
     end
 
     def create
-        @board = Board.new(board_params)
+        @board = current_user.boards.new(board_params)
 
         if @board.save
             redirect_to @board, notice: "投稿が作成されました。"

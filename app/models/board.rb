@@ -9,6 +9,11 @@
 #  work_place   :string(255)
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  user_id      :bigint           not null
+#
+# Indexes
+#
+#  index_boards_on_user_id  (user_id)
 #
 
 class Board < ApplicationRecord
@@ -20,4 +25,6 @@ class Board < ApplicationRecord
     validates :company_name, presence: true, length: { maximum: 20 }
     validates :work_place, presence: true, length: { maximum: 10 }
     validates :body, presence: true, length: { maximum: 500 }
+
+    belongs_to :user
 end
