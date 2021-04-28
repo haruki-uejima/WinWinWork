@@ -1,8 +1,8 @@
 class BoardsController < ApplicationController
-    before_action :set_target_board, only: %i[show edit update destroy]
+    before_action :set_task, only: [:show, :edit, :update, :destroy]
 
     def index
-        @boards = current_user.boards
+        @boards = current_user.boards.order(created_at: :desc)
         @boards = params[:tag_id].present? ? Tag.find(params[:tag_id]).boards : Board.all
         @boards = @boards.page(params[:page]).order(created_at: :desc)
     end
@@ -30,13 +30,12 @@ class BoardsController < ApplicationController
 
     def update
         @board.update(board_params)
-        redirect_to @board, flash: { notice: "投稿が更新されました。"}
+        redirect_to boards_url, notice: "投稿が更新されました。"
     end
 
     def destroy
-        board = Board.find(params[:id])
-        board.destroy
-        redirect_to boards_url, flash: { notice: "投稿が削除されました。"}
+        @board.destroy
+        redirect_to boards_url, notice: "投稿が削除されました。"
     end
 
     private
@@ -45,7 +44,8 @@ class BoardsController < ApplicationController
         params.require(:board).permit(:person_name, :company_name, :work_place, :body, tag_ids: [])
     end
 
-    def set_target_board
-        @board = Board.find(params[:id])
-    end
+    def set_task
+        @board = current_user.boards.find(params[:id])
+      end
+
 end
