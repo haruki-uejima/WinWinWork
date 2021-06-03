@@ -5,7 +5,7 @@
         <%= select_tag :tag_id,
             options_from_collection_for_select(Tag.all, :id, :namen, params[:tag_id]),
             {
-                prompt: 'タグで絞り込み',
+                prompt: '業種で絞り込み',
                 class: 'form-control boards__select',
                 onchange: 'submit(this.form);'
             }
