@@ -3,6 +3,7 @@ require 'rails_helper'
 describe 'タスク管理機能', type: :system do
   describe '一覧表示機能' do
     let(:user_a) { FactoryBot.create(:user, name: 'ユーザーA', email: 'a@example.com')}
+    let(:user_a) { FactoryBot.create(:user, name: 'ユーザーB', email: 'b@example.com')}
 
     before do
         user_a = FactoryBot.create(:user, name: 'テストユーザーA', email: 'a@example.com')
